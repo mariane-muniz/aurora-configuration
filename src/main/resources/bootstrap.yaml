@@ -1,3 +1,5 @@
 spring:
+  zipkin:
+    base-url: http://192.168.0.50:9411
   application:
     name: aurora-configuration
