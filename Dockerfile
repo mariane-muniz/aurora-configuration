@@ -6,7 +6,7 @@ RUN mvn package
 
 FROM openjdk:8-jdk
 WORKDIR /app/
-COPY --from=builder /maven-build/ .
+COPY --from=builder /maven-build/target/configuration.jar .
 ADD target/configuration.jar configuration.jar
 EXPOSE 8084
 ENTRYPOINT ["java", "-jar", "configuration.jar"]
