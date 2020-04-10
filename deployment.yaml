@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aurora-configuration-deployment
+spec:
+  selector:
+    matchLabels:
+      run: configuration
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: configuration
+    spec:
+      containers:
+        - name: configuration
+          image: marianemuniz/aurora-configuration:latest
+          restartPolicy: Always
+          ports:
+            - containerPort: 8084
+      dnsPolicy: ClusterFirst

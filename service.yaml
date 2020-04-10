@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: aurora-configuration-service
+  namespace: default
+spec:
+  ports:
+    - protocol: TCP
+      port: 8084
+      targetPort: 8084
+  selector:
+    run: configuration
+  type: ClusterIP
+status:
+  loadBalancer: {}
