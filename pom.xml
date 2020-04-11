@@ -67,13 +67,6 @@
         </dependency>
     </dependencies>
 
-    <scm>
-        <connection>scm:git:git@github.com:mariane-muniz/test.git</connection>
-        <developerConnection>git@github.com:mariane-muniz/test.git</developerConnection>
-        <url>https://github.com/mariane-muniz/test</url>
-        <tag>@{project.version}</tag>
-    </scm>
-
     <build>
         <finalName>configuration</finalName>
         <plugins>
