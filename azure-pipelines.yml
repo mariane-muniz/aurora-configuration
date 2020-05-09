@@ -21,11 +21,19 @@ stages:
       vmImage: 'ubuntu-latest'
     steps:
 
-    - task: DockerCompose@0
+    - task: Docker@2
       inputs:
-        containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'docker hub'
-        dockerComposeFile: '**/docker-compose.yml'
-        action: 'Push services'
-        includeSourceTags: true
-        includeLatestTag: true
+        containerRegistry: 'docker hub'
+        command: 'login'
+
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker hub'
+        repository: 'aurora-configuration'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker hub'
+        command: 'logout'
