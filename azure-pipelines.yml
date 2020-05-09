@@ -20,22 +20,6 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
-    - task: Maven@3
-      inputs:
-        mavenPomFile: 'pom.xml'
-        publishJUnitResults: true
-        testResultsFiles: '**/surefire-reports/TEST-*.xml'
-#        codeCoverageToolOption: 'JaCoCo'
-#        codeCoverageFailIfEmpty: true
-        javaHomeOption: 'JDKVersion'
-        mavenVersionOption: 'Default'
-        mavenAuthenticateFeed: false
-        effectivePomSkip: false
-#        sonarQubeRunAnalysis: true
-#        sqMavenPluginVersionChoice: 'latest'
-#        checkStyleRunAnalysis: true
-#        pmdRunAnalysis: true
-#        findBugsRunAnalysis: true
 
     - task: Docker@2
       inputs:
