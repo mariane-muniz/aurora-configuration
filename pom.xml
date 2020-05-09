@@ -99,12 +99,12 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>
+    </dependencyManagement><!--
 
     <repositories>
         <repository>
             <id>spring-releases</id>
             <url>http://192.168.0.50:7081/repository/maven-public/</url>
         </repository>
-    </repositories>
+    </repositories> -->
 </project>
