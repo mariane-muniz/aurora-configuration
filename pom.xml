@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>com.omni</groupId>
     <artifactId>configuration</artifactId>
@@ -132,12 +132,5 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement><!--
-
-    <repositories>
-        <repository>
-            <id>spring-releases</id>
-            <url>http://192.168.0.50:7081/repository/maven-public/</url>
-        </repository>
-    </repositories> -->
+    </dependencyManagement>
 </project>
