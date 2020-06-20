@@ -81,6 +81,34 @@
         <finalName>configuration</finalName>
         <plugins>
             <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>2.4.0</version>
+                <configuration>
+                    <from>
+                        <image>openjdk:8u171-alpine</image>
+                        <auth>
+                            <username>marianemuniz</username>
+                            <password>Viper159$</password>
+                        </auth>
+                    </from>
+                    <to>
+                        <image>docker.io/marianemuniz/aurora-${project.artifactId}</image>
+<!--                        <image>marianemuniz/aurora-${project.artifactId}:${project.version}</image>-->
+                        <auth>
+                            <username>marianemuniz</username>
+                            <password>>Viper159$</password>
+                        </auth>
+                    </to>
+                    <container>
+                        <jvmFlags>
+                            <jvmFlag>-Xms512m</jvmFlag>
+                            <jvmFlag>-Xmx512m</jvmFlag>
+                        </jvmFlags>
+                    </container>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
