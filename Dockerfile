@@ -8,5 +8,5 @@ FROM openjdk:8-jdk
 WORKDIR /root/
 COPY --from=0 /maven-build/target/configuration.jar .
 EXPOSE 8084
-ENTRYPOINT ["java", "-jar", "-Xmx32m", "-Xss192k", "configuration.jar"]
+ENTRYPOINT ["java", "-jar", "-Xmx64m", "-Xss256k", "configuration.jar"]
 
